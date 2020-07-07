@@ -1,0 +1,67 @@
+:root {
+  --font-size: 20px;
+  --off: rgb(220, 220, 220);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: var(--font-size);
+  width: 100%;
+  height: 100vh;
+  line-height: 1.5;
+}
+.title {
+  font-size: 70px;
+  text-align: center;
+  margin-top: 30px;
+}
+.container {
+  padding: 30px;
+  display: grid;
+  grid-template-areas:
+    "led door"
+    "escalator escalator";
+  text-align: center;
+}
+.container .led {
+  grid-area: led;
+}
+.btn-on-off {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  border: none;
+  margin: auto;
+}
+
+.on {
+  background-color: rgb(255, 230, 0);
+  box-shadow: black 0 0 5px;
+}
+.off {
+  background-color: var(--off);
+}
+.material-icons {
+  font-size: 80px !important;
+}
+.notChoose {
+  color: var(--off);
+}
+
+.container .door {
+  grid-area: door;
+}
+.container .escalator {
+  margin-top: 30px;
+  grid-area: escalator;
+}
+.container .escalator .slideSpeed {
+  display: flex;
+  justify-content: center;
+}
+.container .escalator .slideSpeed p {
+  margin-left: 10px;
+}

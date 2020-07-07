@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title></title>
+
+    <!--- Meta --->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="JK" />
+
+    <link rel="icon" href="" type="image/x-icon" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+  </head>
+  <body>
+    <h1 class="title">NguHome</h1>
+    <div class="container">
+      <div class="led">
+        <p>LED</p>
+        <div class="btn-on-off off"></div>
+      </div>
+      <div class="door">
+        <p>DOOR</p>
+        <div class="btn-on-off off"></div>
+      </div>
+      <div class="escalator">
+        <p>ESCALATOR</p>
+        <div class="btn-on-off off"></div>
+        <div class="toogleDirect">
+          <span class="material-icons down notChoose">
+            arrow_circle_down
+          </span>
+          <span class="material-icons up" style="font-size: 80px;">
+            arrow_circle_up
+          </span>
+        </div>
+        <div class="slideSpeed">
+          <input type="range" min="1" max="5" class="slider" id="myRange" />
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <!-- Phải đặt theo thứ tự như này ko là lỗi -->
+    <script src="./config/firebase.js"></script>
+    <script src="./script/init-firebase.js"></script>
+    <script src="./script/handleDom.js"></script>
+    <script src="./script/handleFirebase.js"></script>
+  </body>
+</html>
